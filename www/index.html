@@ -6,8 +6,8 @@
         <script type="text/javascript" src="PushNotification.js"></script>
         <script>
         function redirect(token, error) {
-          window.location.assign(
-            "http://punk0706.github.io/gametest/index.html?access_token=" + token + "&error=" + error);
+          //window.location.assign("http://punk0706.github.io/gametest/index.html?access_token=" + token + "&error=" + error);
+            document.getElementId('platform_iframe').src="http://punk0706.github.io/gametest/index.html?access_token=" + token + "&error=" + error;
         }
         function fbLoginSuccess(userData) {
             facebookConnectPlugin.getAccessToken(function(token) {
@@ -24,5 +24,10 @@
         }
         document.addEventListener("deviceready", onDeviceReady, false);
         </script>
+        <iframe id="platform_iframe"
+            src="http://yoav-zibin.github.io/TicTacToe/phonegapIframe.html"
+            frameborder="0"
+            style="height:100%; width:100%; overflow: hidden;"
+            scrolling="no" seamless="seamless"></iframe>
     </body>
 </html>
