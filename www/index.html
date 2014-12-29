@@ -10,34 +10,11 @@
     </head>
     <body>
         <script type="text/javascript" src="cordova.js"></script>
-<<<<<<< HEAD
     	<script type="text/javascript" src="PushNotification.js"></script>
         <script>
         window.addEventListener("message", function (event) {
           eval(event.data);
         });
-=======
-        <script type="text/javascript" src="PushNotification.js"></script>
-        <script>
-        function redirect(token, error) {
-          window.location.assign("http://punk0706.github.io/gametest/index.html?access_token=" + token + "&error=" + error);
-          //document.getElementId('platform_iframe').src="http://punk0706.github.io/gametest/index.html?access_token=" + token + "&error=" + error;
-        }
-        function fbLoginSuccess(userData) {
-            facebookConnectPlugin.getAccessToken(function(token) {
-                redirect(token, "");
-            }, function(error) {
-                redirect("", error);
-            });
-        }
-        function onDeviceReady() {
-            facebookConnectPlugin.login(["public_profile"],
-                fbLoginSuccess,
-                function (error) { redirect("", error); }
-            );
-        }
-        document.addEventListener("deviceready", onDeviceReady, false);
->>>>>>> FETCH_HEAD
         </script>
         <iframe id="platform_iframe"
             src="http://punk0706.github.io/gametest/"
